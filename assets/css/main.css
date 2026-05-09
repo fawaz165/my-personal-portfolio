@@ -1,4 +1,4 @@
-@import url(fontawesome-all.min.css);
+﻿@import url(fontawesome-all.min.css);
 
 /*
 	Hyperspace by HTML5 UP
@@ -98,7 +98,15 @@ input, select, textarea {
 	}
 	
 	body {
-		background: #0e0d0e;		/* color-edit Background Color for all Pages except Home*/
+		background: linear-gradient(-45deg, #071014, #122126, #182d36);
+		background-size: 400% 400%;
+		animation: gradientBG 15s ease infinite;
+	}
+
+	@keyframes gradientBG {
+		0% { background-position: 0% 50%; }
+		50% { background-position: 100% 50%; }
+		100% { background-position: 0% 50%; }
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -115,8 +123,8 @@ input, select, textarea {
 /* Type */
  /* text color*/
 	body, input, select, textarea {
-		color: rgba(255, 255, 255, 0.55);
-		font-family: Arial, Helvetica, sans-serif;
+		color: rgba(255, 255, 255, 0.7);
+		font-family: 'Inter', Arial, Helvetica, sans-serif;
 		font-size: 16.5pt;
 		font-weight: normal;
 		line-height: 1.75;
@@ -176,6 +184,7 @@ input, select, textarea {
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #ffffff;
+		font-family: 'Outfit', sans-serif;
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.5em 0;
@@ -3209,6 +3218,13 @@ input, select, textarea {
 			padding: 5em 5em 3em 5em ;
 			max-width: 100%;
 			width: 75em;
+			background: rgba(255, 255, 255, 0.03);
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+			border: 1px solid rgba(255, 255, 255, 0.05);
+			border-radius: 20px;
+			box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+			margin: 2em auto;
 		}
 
 			@media screen and (max-width: 1680px) {
@@ -3239,27 +3255,27 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #0e0d0e; 		/* "color-edit" Home Page Background Color*/ 
+			background-color: transparent; 		/* "color-edit" Home Page Background Color*/ 
 		}
 
 		.wrapper.style1-alt {
-			background-color: #0e0d0e;			/* "color-edit" Bottom Footer Background Color*/
+			background-color: transparent;			/* "color-edit" Bottom Footer Background Color*/
 		}
 
 		.wrapper.style2 {
-			background-color: #000000;
+			background-color: transparent;
 		}
 
 		.wrapper.style2-alt {
-			background-color: #000000;
+			background-color: transparent;
 		}
 
 		.wrapper.style3 {
-			background-color: #000000;
+			background-color: transparent;
 		}
 
 		.wrapper.style3-alt {
-			background-color: #000000;
+			background-color: transparent;
 		}
 
 		.wrapper.fullscreen {
@@ -3523,7 +3539,10 @@ input, select, textarea {
 
 	#sidebar {
 		padding: 2.5em 2.5em 0.5em 2.5em ;
-		background: #111115;                   /* color-edit Sidebar Background Color */ 
+		background: rgba(17, 17, 21, 0.4);                   /* color-edit Sidebar Background Color */ 
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		border-right: 1px solid rgba(255, 255, 255, 0.1);
 		cursor: default;
 		height: 100vh;
 		left: 0;
@@ -3906,3 +3925,70 @@ input, select, textarea {
 			}
 
 		}
+
+/* Custom Animations & Hover Effects added via task */
+a, .button, button, input[type='button'], input[type='submit'], input[type='reset'] {
+    transition: all 0.3s ease !important;
+}
+
+a:hover, .button:hover, button:hover, input[type='button']:hover, input[type='submit']:hover, input[type='reset']:hover {
+    transform: translateY(-3px) scale(1.05);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+#sidebar > .inner nav ul li a {
+    transition: color 0.3s ease, padding-left 0.3s ease !important;
+}
+
+#sidebar > .inner nav ul li a:hover {
+    padding-left: 10px;
+    color: #fff !important;
+}
+
+/* Custom Overrides based on User Feedback */
+body, input, select, textarea {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.wrapper > .inner {
+    background: rgba(15, 15, 25, 0.65) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5) !important;
+}
+
+#sidebar {
+    background: rgba(10, 10, 15, 0.75) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+}
+
+span.image.right img {
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
+    max-height: 400px !important;
+}
+
+#header {
+    background: rgba(15, 15, 25, 0.65) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+
+/* Join the header with the first section card */
+#wrapper > section:first-of-type > .inner {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    margin-top: 0 !important;
+    border-top: none !important;
+}
+
+#header {
+    border-bottom: none !important;
+}
