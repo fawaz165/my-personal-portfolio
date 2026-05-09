@@ -3992,3 +3992,30 @@ span.image.right img {
 #header {
     border-bottom: none !important;
 }
+
+/* Merge contact and footer cards into one continuous panel */
+#contact > .inner {
+    margin-bottom: 0 !important;
+    border-bottom: none !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+#footer > .inner {
+    margin-top: 0 !important;
+    border-top: none !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.contact-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 3em;
+    padding-top: 2em;
+}
+
+.contact-footer .menu {
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 0.8em;
+    margin: 0;
+}
